@@ -33,7 +33,7 @@ type Query struct {
 const MinEverSecondOffset uint = 0xb
 const MaxEverSecondOffset uint = 0xff
 
-type u64 uint64
+/*type u64 uint64
 var vc64 u64 
 
 func (u *u64) AddCounter(num uint64) uint64 {
@@ -42,7 +42,7 @@ func (u *u64) AddCounter(num uint64) uint64 {
 
 func (u *u64) GetCounter() uint64 {
     return atomic.LoadUint64((*uint64)(u))
-}
+}*/
 
 func PrettyUint(num int64) uint {
 	str := strconv.FormatInt(num, 64)
@@ -154,7 +154,7 @@ type Options struct {
 }
 
 type XVar map[string]map[string]interface{}
-type XTime map[string]time.Time 
+//type XTime map[string]time.Time 
 
 type Platform struct {
 	mut sync.RWMutex 
