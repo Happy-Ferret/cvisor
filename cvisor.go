@@ -12,10 +12,6 @@ import (
 	"time"
 )
 
-type Nmutex struct {
-	mut sync.RWMutex
-}
-
 type Query struct {
 	mut sync.RWMutex 
 	ops uint64 
