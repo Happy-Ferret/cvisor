@@ -140,15 +140,6 @@ func (q *Query) GetOps() *uint64 {
 	return &q.ops
 }
 
-type Options struct {
-	// Active provide option function, 
-	// if 'Active' is 'true' then continue, else exit from function 
-	Active bool 
-
-	// Depth is provide depth counter of trace
-	Depth int 
-}
-
 type XVar map[string]map[string]interface{}
 //type XTime map[string]time.Time 
 
@@ -379,8 +370,4 @@ func (sv *FuncSupervisor) SuperviseFunc(start time.Time, desc string) {
 
 	sv.Elapsed = time.Since(sv.Start)
 	sv.End = time.Now()
-	
-	/*_increment := func() {
-		opts.Depth += 1
-	}*/
 }
